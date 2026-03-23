@@ -8,21 +8,22 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    background: #b8a888;
+    background: linear-gradient(160deg, #fefaf0 0%, #f9f1d8 55%, #fefae8 100%);
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
-    padding: 32px 16px;
+    padding: 0;
     font-family: 'Playfair Display', serif;
   }
   .card {
-    width: 420px;
+    width: 100%;
+    min-height: 100vh;
     background: linear-gradient(160deg, #fefaf0 0%, #f9f1d8 55%, #fefae8 100%);
     position: relative;
     overflow: hidden;
     padding: 52px 50px 48px;
     display: flex; flex-direction: column; align-items: center;
+    justify-content: center;
     text-align: center;
-    box-shadow: 0 28px 70px rgba(0,0,0,0.2), 0 4px 16px rgba(0,0,0,0.1);
   }
 
   /* Мраморные прожилки */
@@ -80,8 +81,8 @@
 
   /* Мобильная адаптация */
   @media (max-width: 480px) {
-    body { padding: 16px 8px; }
-    .card { width: 100%; padding: 36px 24px 32px; }
+    body { padding: 0; }
+    .card { width: 100%; min-height: 100vh; padding: 36px 24px 32px; }
     .number img { width: 170px; }
     .text { font-size: 15px; max-width: 100%; }
     .div { width: 150px; }
