@@ -9,11 +9,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chimitdorzhi-studio-web.github.io/invitation/">
 <meta property="og:image" content="https://chimitdorzhi-studio-web.github.io/invitation/Screenshot_6.png">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    background: linear-gradient(160deg, #fefaf0 0%, #f9f1d8 55%, #fefae8 100%);
+    background: linear-gradient(160deg, #1a0a2e 0%, #2d1154 40%, #1a0a2e 100%);
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
     padding: 0;
@@ -22,7 +22,7 @@
   .card {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(160deg, #fefaf0 0%, #f9f1d8 55%, #fefae8 100%);
+    background: linear-gradient(160deg, #1a0a2e 0%, #2d1154 40%, #1a0a2e 100%);
     position: relative;
     overflow: hidden;
     padding: 52px 50px 48px;
@@ -31,26 +31,26 @@
     text-align: center;
   }
 
-  /* Мраморные прожилки */
+  /* Золотые прожилки */
   .marble {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    opacity: 0.15; pointer-events: none;
+    opacity: 0.12; pointer-events: none;
   }
 
-  /* Двойная рамка */
+  /* Двойная рамка — золотая */
   .frame {
     position: absolute;
     top: 14px; bottom: 14px; left: 14px; right: 14px;
-    border: 1.5px solid rgba(175,125,15,0.55);
+    border: 1.5px solid rgba(212,175,55,0.55);
     pointer-events: none;
   }
   .frame::before {
     content:''; position:absolute; inset:7px;
-    border: 1px solid rgba(175,125,15,0.22);
+    border: 1px solid rgba(212,175,55,0.25);
   }
 
   /* Угловые ромбы */
-  .cd { position:absolute; width:10px; height:10px; background:#c8920a; transform:rotate(45deg); }
+  .cd { position:absolute; width:10px; height:10px; background:#d4af37; transform:rotate(45deg); }
   .cd-tl { top:9px; left:9px; } .cd-tr { top:9px; right:9px; }
   .cd-bl { bottom:9px; left:9px; } .cd-br { bottom:9px; right:9px; }
 
@@ -62,42 +62,53 @@
   .d7{animation-delay:1.3s} .d8{animation-delay:1.5s} .d9{animation-delay:1.7s}
   .d10{animation-delay:1.9s} .d11{animation-delay:2.1s}
 
-  .number { line-height:1; }
-  .number img { width:220px; height:auto; display:block; }
+  .number-text {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 1;
+    background: linear-gradient(180deg, #f5e6a3 0%, #d4af37 30%, #b8860b 60%, #d4af37 80%, #f5e6a3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(212,175,55,0.4));
+    letter-spacing: 8px;
+  }
+
   .top-label {
     font-family:'Cinzel',serif; font-size:16px;
-    letter-spacing:5px; color:#9a6e10; text-transform:uppercase; margin-top:5px;
+    letter-spacing:5px; color:#d4af37; text-transform:uppercase; margin-top:5px;
   }
   .div {
     width:240px; height:1px;
-    background: linear-gradient(to right,transparent,#c8920a,transparent);
+    background: linear-gradient(to right,transparent,#d4af37,transparent);
     margin:14px auto; position:relative; flex-shrink:0;
   }
   .div::before {
     content:'◆'; position:absolute; top:50%; left:50%;
-    transform:translate(-50%,-50%); color:#c8920a; font-size:7px;
-    background: #fdf6e4; padding:0 7px;
+    transform:translate(-50%,-50%); color:#d4af37; font-size:7px;
+    background: #1a0a2e; padding:0 7px;
   }
 
   .text {
     font-size:24px; font-style:italic;
-    color:#2e1e00; line-height:1.85; max-width:400px;
+    color:#f0e6d0; line-height:1.85; max-width:400px;
   }
   .orn { opacity:.55; margin-top:5px; }
   .confirm-btn {
     display:inline-block; margin-top:18px;
     padding:14px 40px;
-    background: linear-gradient(135deg, #c8920a 0%, #a87508 100%);
-    color:#fff; font-family:'Playfair Display',serif; font-size:22px;
-    font-style:italic; letter-spacing:1px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+    color:#1a0a2e; font-family:'Playfair Display',serif; font-size:22px;
+    font-style:italic; letter-spacing:1px; font-weight:700;
     text-decoration:none; border:none; cursor:pointer;
     border-radius:4px;
-    box-shadow: 0 4px 14px rgba(168,117,8,0.35);
+    box-shadow: 0 4px 14px rgba(212,175,55,0.35);
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .confirm-btn:hover {
     transform:translateY(-2px);
-    box-shadow: 0 6px 20px rgba(168,117,8,0.45);
+    box-shadow: 0 6px 20px rgba(212,175,55,0.5);
   }
   .confirm-btn:active { transform:translateY(0); }
 
@@ -105,7 +116,7 @@
   @media (max-width: 480px) {
     body { padding: 0; }
     .card { width: 100%; min-height: 100vh; padding: 36px 24px 32px; }
-    .number img { width: 170px; }
+    .number-text { font-size: 90px; }
     .text { font-size: 20px; max-width: 100%; }
     .div { width: 180px; }
     .frame { top: 10px; bottom: 10px; left: 10px; right: 10px; }
@@ -115,17 +126,17 @@
 <body>
 <div class="card">
 
-  <!-- Мраморные прожилки -->
+  <!-- Золотые прожилки -->
   <svg class="marble" viewBox="0 0 420 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
     <defs><filter id="mb"><feGaussianBlur stdDeviation="3.5"/></filter></defs>
-    <path d="M0,100 Q90,80 150,150 Q210,220 320,175 Q385,148 420,195" stroke="#b8922a" stroke-width="2" fill="none" filter="url(#mb)"/>
-    <path d="M0,100 Q90,80 150,150 Q210,220 320,175 Q385,148 420,195" stroke="#b8922a" stroke-width="0.7" fill="none"/>
-    <path d="M60,0 Q95,90 75,180 Q55,260 115,340 Q165,405 135,495 Q105,570 148,650 Q165,685 185,700" stroke="#9a7220" stroke-width="1.5" fill="none" filter="url(#mb)"/>
-    <path d="M60,0 Q95,90 75,180 Q55,260 115,340 Q165,405 135,495 Q105,570 148,650 Q165,685 185,700" stroke="#9a7220" stroke-width="0.55" fill="none"/>
-    <path d="M420,60 Q355,130 375,235 Q395,325 335,400 Q275,460 305,555 Q325,615 285,700" stroke="#c8a030" stroke-width="1.2" fill="none" filter="url(#mb)"/>
-    <path d="M420,60 Q355,130 375,235 Q395,325 335,400 Q275,460 305,555 Q325,615 285,700" stroke="#c8a030" stroke-width="0.45" fill="none"/>
-    <path d="M0,400 Q65,368 125,410 Q205,462 285,425 Q355,390 420,435" stroke="#b8922a" stroke-width="1" fill="none" filter="url(#mb)"/>
-    <path d="M210,0 Q225,65 195,145 Q165,215 205,295" stroke="#9a7220" stroke-width="0.8" fill="none"/>
+    <path d="M0,100 Q90,80 150,150 Q210,220 320,175 Q385,148 420,195" stroke="#d4af37" stroke-width="2" fill="none" filter="url(#mb)"/>
+    <path d="M0,100 Q90,80 150,150 Q210,220 320,175 Q385,148 420,195" stroke="#d4af37" stroke-width="0.7" fill="none"/>
+    <path d="M60,0 Q95,90 75,180 Q55,260 115,340 Q165,405 135,495 Q105,570 148,650 Q165,685 185,700" stroke="#b8860b" stroke-width="1.5" fill="none" filter="url(#mb)"/>
+    <path d="M60,0 Q95,90 75,180 Q55,260 115,340 Q165,405 135,495 Q105,570 148,650 Q165,685 185,700" stroke="#b8860b" stroke-width="0.55" fill="none"/>
+    <path d="M420,60 Q355,130 375,235 Q395,325 335,400 Q275,460 305,555 Q325,615 285,700" stroke="#d4af37" stroke-width="1.2" fill="none" filter="url(#mb)"/>
+    <path d="M420,60 Q355,130 375,235 Q395,325 335,400 Q275,460 305,555 Q325,615 285,700" stroke="#d4af37" stroke-width="0.45" fill="none"/>
+    <path d="M0,400 Q65,368 125,410 Q205,462 285,425 Q355,390 420,435" stroke="#d4af37" stroke-width="1" fill="none" filter="url(#mb)"/>
+    <path d="M210,0 Q225,65 195,145 Q165,215 205,295" stroke="#b8860b" stroke-width="0.8" fill="none"/>
   </svg>
 
   <!-- Рамка и ромбы -->
@@ -135,7 +146,7 @@
 
   <!-- КОНТЕНТ -->
   <div class="fu top-label d1">Юбилей</div>
-  <div class="fu number d2"><img src="Screenshot_5 (1).png" alt="55"></div>
+  <div class="fu d2"><span class="number-text">55</span></div>
   <div class="fu div d2"></div>
 
   <p class="fu text d4">
@@ -166,11 +177,11 @@
 
   <div class="fu orn d10">
     <svg width="140" height="20" viewBox="0 0 140 20" fill="none">
-      <line x1="0" y1="10" x2="54" y2="10" stroke="#c8920a" stroke-width="1"/>
-      <polygon points="58,3 65,10 58,17 51,10" fill="#c8920a"/>
-      <polygon points="65,5 72,10 65,15 58,10" fill="none" stroke="#c8920a" stroke-width="0.8" opacity="0.5"/>
-      <polygon points="72,3 79,10 72,17 79,10" fill="#c8920a"/>
-      <line x1="83" y1="10" x2="140" y2="10" stroke="#c8920a" stroke-width="1"/>
+      <line x1="0" y1="10" x2="54" y2="10" stroke="#d4af37" stroke-width="1"/>
+      <polygon points="58,3 65,10 58,17 51,10" fill="#d4af37"/>
+      <polygon points="65,5 72,10 65,15 58,10" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+      <polygon points="72,3 79,10 72,17 79,10" fill="#d4af37"/>
+      <line x1="83" y1="10" x2="140" y2="10" stroke="#d4af37" stroke-width="1"/>
     </svg>
   </div>
 
