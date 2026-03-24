@@ -207,12 +207,12 @@
 
       <div class="fields">
         <div class="field-group" id="guest1-group">
-          <label>ФИО гостя</label>
-          <input type="text" id="guest1" placeholder="Иванов Иван Иванович" required>
+          <label>Фамилия и имя гостя</label>
+          <input type="text" id="guest1" placeholder="Иванов Иван" required>
         </div>
         <div class="field-group" id="guest2-group">
-          <label>ФИО второго гостя</label>
-          <input type="text" id="guest2" placeholder="Иванова Мария Петровна">
+          <label>Фамилия и имя второго гостя</label>
+          <input type="text" id="guest2" placeholder="Иванова Мария">
         </div>
       </div>
 
@@ -262,14 +262,14 @@
     const guest1 = document.getElementById('guest1').value.trim();
     const guest2 = document.getElementById('guest2').value.trim();
 
-    // Валидация
-    if (!guest1) {
-      errorEl.textContent = 'Пожалуйста, введите ФИО';
+    // Валидация — минимум фамилия и имя (два слова)
+    if (!guest1 || guest1.split(/\s+/).length < 2) {
+      errorEl.textContent = 'Пожалуйста, введите фамилию и имя';
       errorEl.style.display = 'block';
       return;
     }
-    if (guestCount === 2 && !guest2) {
-      errorEl.textContent = 'Пожалуйста, введите ФИО второго гостя';
+    if (guestCount === 2 && (!guest2 || guest2.split(/\s+/).length < 2)) {
+      errorEl.textContent = 'Пожалуйста, введите фамилию и имя второго гостя';
       errorEl.style.display = 'block';
       return;
     }
