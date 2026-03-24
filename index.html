@@ -230,7 +230,7 @@
 <script>
   // === НАСТРОЙКА ===
   // Вставьте сюда URL вашего Google Apps Script (см. инструкцию ниже)
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyaq2A4rTIMdaiENdfkzvCaBazaQkv-9DHioBhKwNRuGziFDms6umdwvM9alw2-dYuo/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCWr7AvjL_cZJ5lA0zY0AJWw108KcaCLQic3AhEpxteqIHYeCS8UrmwRG-3hLTbyKd/exec';
   // =================
 
   let guestCount = 1;
@@ -278,19 +278,17 @@
     btn.disabled = true;
     btn.textContent = 'Отправка...';
 
-    const data = {
+    const params = new URLSearchParams({
       count: guestCount,
       guest1: guest1,
       guest2: guestCount === 2 ? guest2 : '',
       date: new Date().toLocaleString('ru-RU')
-    };
+    });
 
     try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+      await fetch(SCRIPT_URL + '?' + params.toString(), {
+        method: 'GET',
+        mode: 'no-cors'
       });
 
       document.getElementById('rsvpForm').style.display = 'none';
